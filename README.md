@@ -1,6 +1,7 @@
 # IHF: Code - Python Course
 The IHF: Code - Python Course is a 6-week course of evening classes, designed to give attendees an introduction to programming in python. The course uses a code-along approach, with lecture slides and practical exercises to cement knowledge.
 
+
 ## Session 1 Exercises
 ### Section A
 1. Write code that prints ‘Hello world’
@@ -36,6 +37,7 @@ The IHF: Code - Python Course is a 6-week course of evening classes, designed to
 4. Ask the user to enter a number, if the number is even, print "Even", otherwise print "Odd"
 5. Ask the user for 2 different numbers, if the total of the two numbers is over 21, print "Bust" otherwise print "Safe"
 
+
 ## Session 2 Exercises
 
 ### Section A
@@ -53,7 +55,7 @@ i. Expand for the rest of the year, given that summer is June/July/August. Autum
 ii. Ensure that when an unknown month is given it prints "I don't know"
 4. Ask the user for two different numbers, if both numbers are even, print "Even", if both numbers are odd, print "Odd", else print the product of the two numbers
 
-## Section C
+### Section C
 1. Create the following list of items: Apples, Cherries, Pears, Pineapple, Peaches, Mango
 2. Add "Grapes" to the list
 3. Change "Pears" to "Strawberries"
@@ -63,7 +65,7 @@ ii. Ensure that when an unknown month is given it prints "I don't know"
 7. Order the list alphabetically
 8. Print out the list again
 
-## Section D
+### Section D
 1. Loop through the list you created in section C and print each item out
 2. Print the numbers 1 to 100 (including the number 100)
 3. Print all odd numbers from 1 to 100
