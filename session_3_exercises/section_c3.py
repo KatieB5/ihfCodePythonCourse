@@ -34,6 +34,23 @@ menu = [
     }
 ]
 
+answers = ["yes", "no"]
+answer = None
+
+while answer not in answers:
+    answer = input("Would you like to add a dish to the menu? ")
+    if (answer == "yes"):
+        dish_name = input("Dish name: ")
+        dish_price = float(input("Dish price: "))
+        is_veggie = bool(input("Is the dish vegetarian? (0 = no, 1 = yes) "))
+        
+        menu.append({
+            "dish_name": dish_name,
+            "dish_price": dish_price,
+            "is_veggie": is_veggie
+        })
+        
+
 print("Full menu")
 for dish in menu:
     print("\t" + dish["name"])
