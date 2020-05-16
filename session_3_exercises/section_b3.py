@@ -16,4 +16,4 @@ for key in apple:
     print(str(key) + " = " + str(apple[key]))
 
 #6
-del apple["is_on_sale"]
+del (apple["is_on_sale"])
