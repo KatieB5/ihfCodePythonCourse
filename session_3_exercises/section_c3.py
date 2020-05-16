@@ -5,11 +5,45 @@ name = None
 
 while name != " ":
     name = input("Enter a name: ")
-    age = int(input("Enter age: "))
+    if name:
+        age = int(input("Enter age: "))
     contacts.append({"name":name, "age":age})
-    print(contacts)
+print(contacts)
 
 #2
+menu = [
+    {
+        "dish_name": "Fish and chips",
+        "dish_price": 6.99,
+        "is_veggie": False
+    },
+    {
+        "dish_name": "Penne arrabiata",
+        "dish_price": 4.99,
+        "is_veggie": True
+    }, 
+    {
+        "dish_name": "Beans on toast",
+        "dish_price": 2.99,
+        "is_veggie": True
+    }, 
+    {
+        "dish_name": "Crispy duck and pancakes",
+        "dish_price": 11.99,
+        "is_veggie": False
+    }
+]
+
+print("Full menu")
+for dish in menu:
+    print("\t" + dish["name"])
+
+print("Vegetarian menu")
+for dish in menu:
+    if ("is_veggie"):
+        print("\t" + dish["name"])
+
+#3
 import random
 
 beetles = []
