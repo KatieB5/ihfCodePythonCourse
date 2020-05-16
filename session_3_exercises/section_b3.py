@@ -8,8 +8,12 @@ apple["best_before"] = "03/05/2021"
 apple["Price"] = "0.41"
 
 #4
+apple["is_on_sale"] = True
+print(apple)
+
+#5
 for key in apple:
     print(str(key) + " = " + str(apple[key]))
 
-#5
-del apple["Price"]
+#6
+del apple["is_on_sale"]
