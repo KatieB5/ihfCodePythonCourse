@@ -147,6 +147,7 @@ FizzBuzz
 1. Write a function called is_odd that will return True or False if the integer passed as a parameter is odd (hint: x % 2 will return true for all odd numbers)
 2. Write a function that accepts a word and returns it backwards, e.g. 'hello' -> 'olleh'
 3. Write a recursive function that accepts a number and prints that number of stars, followed by ever decreasing stars on each line, E.g:
+***
 **
 *
 
