@@ -157,3 +157,12 @@ FizzBuzz
 7. Write a function that checks to see if a string is a pallindrome, if it is, it will return True and False if it is not.
 8. Write a function that checks to see if a sentence is a pallindrome, if it is, it will return True and False if it is not. 
 - Tip - you may want to format your sentence so it is all lower case, and .replace() to get rid of white spaces.
+
+
+## Session 6 exercises
+
+### Section A
+
+1. Read the file 'jabberwocky.txt' and print its content to the screen
+2. Read the file 'austen.txt' and print the amount of lines in the file
+3. Each line of the file 'numbers.txt' contains a number, write a script to add up all the values in the file
