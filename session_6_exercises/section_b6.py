@@ -7,19 +7,19 @@ while name:
     f.write(name + "\n")
 f.close()
 
+
 # 2
 def is_odd(num):
     if num % 2 == 0:
         return True
     return False
 
-f = open("numbers.txt", "r")
-
 g = open("even.txt", "w")
-for x in f:
+for x in open("numbers.txt", "r"):
     if is_odd(int(x)):
         g.write(x)
 g.close()
+
 
 # 3
 cipher = {
@@ -55,12 +55,13 @@ decoded_message = ""
 
 f = open("secret.txt", "r")
 for x in f:
-        cipher_key = x.strip()
-        # decoded_message += cipher[x]
-        print(cipher[cipher_key])
+    cipher_key = x.strip()
+    # decoded_message += cipher[x]
+    print(cipher[cipher_key])
 print(decoded_message)
 
-# 4
+
+# 4 (original version only based on frequency of 1 as leading digit)
 def fake_data_calculator(file):
     f = open(file, "r")
     
@@ -68,9 +69,10 @@ def fake_data_calculator(file):
     total_nums_starting_with_1 = 0
 
     for x in f:
-        total_nums_in_file += 1
-        if x[0] == "1":
-            total_nums_starting_with_1 += 1
+        if x:
+            total_nums_in_file += 1
+            if x[0] == "1":
+                total_nums_starting_with_1 += 1
     
     leading_digit_probability = ((total_nums_starting_with_1/total_nums_in_file) * 100)
 
@@ -85,4 +87,27 @@ for file in data:
     fake_data_calculator(file)
 
 
+# 4 (alternative version)
 
+def fake_data_calculator2(file):
+    f = open(file, "r")
+
+    leading_dig_count = {}
+        
+    for i in range(1, 10):
+        leading_dig_count[str(i)] = 0
+    
+
+    for x in f:
+        if x:
+            leading_dig_count[x[0]] += 1
+
+    print("Results for: " + file)
+
+    for y in range(1, 10):
+        print(str(y) + "=" + str(leading_dig_count[str(y)]/100) + "%")
+
+data = ["accounts_1.txt", "accounts_2.txt", "accounts_3.txt"]
+
+for file in data:
+    fake_data_calculator2(file)
