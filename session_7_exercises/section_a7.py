@@ -56,3 +56,18 @@ new_file_of_kwargs(
     blood_type = "O negative"
 )
 
+# 6
+from functools import reduce
+import operator 
+
+def calculator_func(*nums, operand):
+    if operand == "multiply":
+        # print(reduce(operator.mul, nums, 1))
+        return reduce(operator.mul, nums, 1)
+    if operand == "add":
+        # print(sum(nums))
+        return sum(nums)
+
+calculator_func(1, 2, 3, 4, operand = "multiply")
+calculator_func(65, 200, 84, 12, operand = "add")
+
