@@ -41,3 +41,18 @@ new_file_of_params(
     "O negative"
 )
 
+# 5
+
+import json 
+
+def new_file_of_kwargs(**kwargs):
+    f = open("new_kwargs_file.text", "w")
+    f.write(json.dumps(kwargs))
+
+new_file_of_kwargs(
+    fname = "Katie",
+    lname = "Bickford",
+    dob = "31031992",
+    blood_type = "O negative"
+)
+
