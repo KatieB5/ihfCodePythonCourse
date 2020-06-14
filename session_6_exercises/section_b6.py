@@ -111,3 +111,4 @@ data = ["accounts_1.txt", "accounts_2.txt", "accounts_3.txt"]
 
 for file in data:
     fake_data_calculator2(file)
+
