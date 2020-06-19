@@ -71,3 +71,36 @@ def calculator_func(*nums, operand):
 calculator_func(1, 2, 3, 4, operand = "multiply")
 calculator_func(65, 200, 84, 12, operand = "add")
 
+# 7 a
+import csv 
+
+def new_contacts(contacts):
+    new_file = csv.writer(open("new_contacts_file.csv", "w"))
+    for key, value in contacts.items():
+        new_file.writerow([key, value])
+
+new_contacts({
+    "fname": "Katie",
+    "lname": "Bickford",
+    "phone_number": "01615478893"
+})
+
+# 7 b
+
+prompt = input("Would you like to add some contects? (Y/N)")
+
+if prompt == "Y":
+    new_file_2 = open("new_contacts_file_2.csv", "a")
+    fieldnames = ['fname', 'lname', 'phone_number']
+    writer = csv.DictWriter(new_file_2, fieldnames=fieldnames)
+    writer.writeheader()
+    
+    fname = True
+
+    while fname:
+        fname = input("First name: ")
+        lname = input("Last name: ")
+        phone_number = input("Phone number: ")
+        writer.writerow({'fname': fname, 'lname': lname, 'phone_number': phone_number})
+    new_file_2.close()
+    exit()
